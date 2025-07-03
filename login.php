@@ -1,5 +1,9 @@
+<!--  A LÓGICA VEM SEMPRE ANTES -->
 <?php
+
+//Server -> o servidor; request method -> vai requisitar algum método, mas qual? -> === post.
 if ($_SERVER["REQUEST_METHOD"] === "POST"){
+    //O servidor não quer pegar nada vazio, então essa condicional serve para verificar se o método requisitado está vazio
     if (isset($_POST["userEmail"])){
         $email = $_POST["userEmail"];
         echo$email;
@@ -15,10 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
     <title>Login</title>
 </head>
 <body>
+
     
     <form method="POST">
         <label for="">
-            <p>Endereçoi de e-amil</p>
+            <p>Endereço de e-mail</p>
             <input type="email" id="userEmail" name="userEmail" placeholder="email@email.com">
             <button type="submit">Entrar</button>
         </label>
